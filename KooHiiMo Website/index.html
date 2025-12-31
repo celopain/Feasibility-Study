@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KooHiiMo コーヒーモ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const form = document.getElementById("orderForm");
+
+function injectCartIntoForm() {
+  // Remove old injected inputs (prevents duplicates)
+  document.querySelectorAll(".cart-input").forEach(el => el.remove());
+
+  cartItems.forEach((item, index) => {
+    Object.entries(item).forEach(([key, value]) => {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = `item_${index}_${key}`;
+      input.value = value;
+      input.classList.add("cart-input");
+      form.appendChild(input);
+    });
+  });
+}
+
+    </script>
+</head>
+<body>
+<header>
+    <a href="#" class="logo"><i class="fa-solid fa-mug-saucer"></i> KooHiiMo コーヒーモ</a>
+    
+        <nav class="navbar">
+             <a class="active" href="#home">home</a>
+             <a href="#menu">   menu</a>
+             <a href="#about">about</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"></i>
+            <!-- <a href="wishlist.html" class="fas fa-heart"></a> -->
+            <a href="cart.html" class="fas fa-shopping-cart"></a>
+        </div>
+
+</header>
+
+<!-- Pop-up Notification -->
+<div class="popup" id="popup">
+    <p>Item added to cart!</p>
+</div>
+
+
+<form action ="" id="search-form">
+     <input type="search"  placeholder="search" name="" id="search-box">
+     <label for="search-box" class="fas fa-search"></label>
+     <i class="fas fa-times" id="close"></i>
+ </form>
+     
+
+
+<section class="home" id="home">
+
+    <div class="home-slider">
+
+        <div class="wrapper">
+
+            <div class="slide">
+                <div class="content">
+                    <span>our special drink</span>
+                    <h3>Frappe</h3>
+                    <p>Frappe, one of the most basic but is also one of the best tasting type of coffee in our menu, try it!</p>
+                    <a class="btn" onclick="addToCart('Frappe', 60.00)">Add to Cart</a>
+                </div>
+                <div class="image">
+                    <img style="border-radius: 20px;" src="images/frappe.png" alt="Coffee Pic">
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class ="content">
+                    <span>Recommendations</span>
+                    <h3>Caramel Macchiato</h3>
+                    <p>Pinaka malinamnam badabimbam pow!!! send muna images toll!!</p>
+                         <a class="btn" onclick="addToCart('Caramel Macchiato', 50.00)">Add to Cart</a>
+                </div> 
+                <div class="image">
+                    <img style="border-radius: 20px;" src="images/caramel_macchiato.png" alt="BASTA PICTURE NG KAPE DITO">
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="content">
+                    <span>legends lang nakakaalam</span>
+                    <h3>tamad na estudyante</h3>
+                    <p>isa ako sa menu syempre matalap ako eh</p>
+                        <a class="btn" onclick="addToCart('Marcelo Pogi', 67.00)">Add to Cart</a>
+                </div>
+                <div class="image">
+                    <img src="images/pogi" alt="picture dapat ng kape">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- menu -->
+<section class="menu" id="menu">
+
+    <h3 class="sub-heading">our menu</h3>
+    <h3 class="heading">Coffees</h3>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/.png" alt="">
+            <h3>Caramel Macchiato</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱60.00</span>
+            
+            <a class="btn" onclick="addToCart('Dosa', 60.00)">Add to Cart</a>
+        </div>
+
+        <div class="box">
+            <img src="images/.png" alt="">
+            <h3>Black Coffee</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱50.00</span>
+            <a class="btn" onclick="addToCart('Podi Idly', 50.00)">Add to Cart</a>
+
+        </div>
+
+        <div class="box">
+            <img src="images/.png" alt="">
+            <h3>Strawberry Matcha</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₱45.00</span>
+            <a class="btn" onclick="addToCart('Idly Sambhar', 45.00)">Add to Cart</a>
+
+        </div>
+
+        <div class="box">
+            <img src="images/Vada.png" alt="">
+            <h3>Vada</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹50.00</span> 
+            <a class="btn" onclick="addToCart('Vada', 50.00)">Add to Cart</a>
+         </div>
+
+         <div class="box">
+            <img src="images/upma.png" alt="">
+            <h3>Upma</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹65.00</span> 
+            <a class="btn" onclick="addToCart('Upma', 65.00)">Add to Cart</a>
+         </div>
+
+         <div class="box">
+            <img src="images/Puri.png" alt="">
+            <h3>Puri</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹50.00</span> 
+            <a class="btn" onclick="addToCart('Puri', 50.00)">Add to Cart</a>
+         </div>
+
+         <div class="box">
+            <img src="images/poha.png" alt="">
+            <h3>Poha</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹40.00</span> 
+            <a class="btn" onclick="addToCart('Poha', 40.00)">Add to Cart</a>
+         </div>
+    </div>
+</div>
+<br />
+<br />
+
+<h3 class="heading">Lunch</h3>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/Veg_Thali.png" alt="">
+            <h3>Veg Thali</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹110.00</span>
+            <a class="btn" onclick="addToCart('Veg Thali', 110.00)">Add to Cart</a>
+        </div>
+
+        <div class="box">
+            <img src="images/Biryani.png" alt="">
+            <h3>Biryani</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹180.00</span>
+            <a class="btn" onclick="addToCart('Biryani', 180.00)">Add to Cart</a>
+        </div>
+
+        <div class="box">
+            <img src="images/Fried_rice.png" alt="">
+            <h3>Fried Rice</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹70.00</span>
+            <a class="btn" onclick="addToCart('fried rice', 70.00)">Add to Cart</a>
+        </div>
+
+        <div class="box">
+            <img src="images/Mushroom.png" alt="">
+            <h3>Mushroom Rice</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹90.00</span> 
+            <a class="btn" onclick="addToCart('mushroom rice', 90.00)">Add to Cart</a>
+         </div>
+
+         <div class="box">
+            <img src="images/Curd_rice.png" alt="">
+            <h3>Curd Rice</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span>₹60.00</span> 
+            <a class="btn" onclick="addToCart('Curd rice', 60.00)">Add to Cart</a>
+         </div>    
+    </div>
+</div>
+</section>
+
+<!-- menu section ends  -->
+
+
+<section class="about" id="about">
+    <h3 class="sub-heading">about us</h3>
+    <h1 class="heading">why choose us?</h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="images/logo.PNG" alt="logo here">
+        </div>
+
+        <div class="content">
+            <h3>Welcome to our
+                 KooHiiMo コーヒーモ</h3>
+            <p>
+                At KooHiiMo コーヒーモ, we are dedicated to serving you the finest quality of coffees
+                that not only satisfy your thirst and desire for energy but also leave a lasting impression. We are more than just a coffee shop; 
+                we are your home away from home, ensuring you receive delicious, wholesome coffees every time.
+            </p>
+            <p>
+                Quality is at the heart of everything we do. 
+                From the freshest ingredients to the skillful hands of our baristas, 
+                we take pride in delivering coffees that are a cut above the rest. 
+                Each coffee/drink is prepared with love and meticulous attention to detail, 
+                ensuring a delightful working experience.
+            </p>
+            <div class="icons-container">
+                <div class="icons">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>Delivery 6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        AM - 6PM</span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- footer -->
+
+<section class="footer">
+    <div class="box-container">
+        
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About us</a>
+        </div>
+        
+    <div class="credit">copyright @ 2025-2026 by<span> Group 1 Net Prog </span> </div>
+</section>
+
+<div class="loader-container">
+    <img src="" alt="">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
