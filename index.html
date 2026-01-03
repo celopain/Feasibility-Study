@@ -39,7 +39,6 @@ function injectCartIntoForm() {
 
         <div class="icons">
             <i class="fas fa-bars" id="menu-bars"></i>
-            <i class="fas fa-search" id="search-icon"></i>
             <!-- <a href="wishlist.html" class="fas fa-heart"></a> -->
             <a href="cart.html" class="fas fa-shopping-cart"></a>
         </div>
@@ -69,12 +68,14 @@ function injectCartIntoForm() {
             <div class="slide">
                 <div class="content">
                     <span>our special drink</span>
-                    <h3>Frappe</h3>
-                    <p>Frappe, one of the most basic but is also one of the best tasting type of coffee in our menu, try it!</p>
-                    <a class="btn" onclick="addToCart('frappe', 60.00)">Add to Cart</a>
+                    <h3>strawberry matcha</h3>
+                    <p>what's this? this is the weird combination of what we offer here, it's the unique flavor that
+                        makes it stand out, try it!
+                    </p>
+                    <a class="btn" onclick="addToCart('strawberry matcha', 189.00)">Add to Cart</a>
                 </div>
                 <div class="image">
-                    <img style="border-radius: 20px;" src="images/frappe.png" alt="Coffee Pic">
+                    <img style="border-radius: 20px;" src="images/strawberry_matcha.png" alt="Coffee Pic">
                 </div>
             </div>
 
@@ -82,8 +83,10 @@ function injectCartIntoForm() {
                 <div class ="content">
                     <span>Recommendations</span>
                     <h3>Caramel Macchiato</h3>
-                    <p>Pinaka malinamnam badabimbam pow!!! send muna images toll!!</p>
-                         <a class="btn" onclick="addToCart('caramel macchiato', 50.00)">Add to Cart</a>
+                    <p>classic choice, sweet, and refreshing coffee that will provide you the sugar to
+                        give energy for your works.
+                    </p>
+                         <a class="btn" onclick="addToCart('caramel macchiato', 179.00)">Add to Cart</a>
                 </div> 
                 <div class="image">
                     <img style="border-radius: 20px;" src="images/caramel_macchiato.png" alt="BASTA PICTURE NG KAPE DITO">
@@ -92,13 +95,15 @@ function injectCartIntoForm() {
 
             <div class="slide">
                 <div class="content">
-                    <span>legends lang nakakaalam</span>
-                    <h3>tamad na estudyante</h3>
-                    <p>isa ako sa menu syempre matalap ako eh</p>
-                        <a class="btn" onclick="addToCart('pogi', 67.00)">Add to Cart</a>
+                    <span>go regular</span>
+                    <h3>simple brew</h3>
+                    <p>going for a basic, go-to, and easy order? maybe it's just one click away to simplicity
+                        at it's peak!
+                    </p>
+                        <a class="btn" onclick="addToCart('simple brew', 99.00)">Add to Cart</a>
                 </div>
                 <div class="image">
-                    <img src="images/pogi.png" alt="picture dapat ng kape">
+                    <img src="images/placeholder.png" alt="picture dapat ng kape">
                 </div>
             </div>
         </div>
@@ -116,7 +121,7 @@ function injectCartIntoForm() {
     <div class="box-container">
 
         <div class="box">
-            <img src="images/.png" alt="">
+            <img src="images/caramel_macchiato.png" alt="">
             <h3>Caramel Macchiato</h3>
             <div class="stars">
                 <i class="fas fa-star"></i>
@@ -125,14 +130,14 @@ function injectCartIntoForm() {
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <span>₱60.00</span>
+            <span>₱179.00</span>
             
-            <a class="btn" onclick="addToCart('Dosa', 60.00)">Add to Cart</a>
+            <a class="btn" onclick="addToCart('caramel macchiato', 99.00)">Add to Cart</a>
         </div>
 
         <div class="box">
-            <img src="images/.png" alt="">
-            <h3>Black Coffee</h3>
+            <img src="images/simple_brew.png" alt="">
+            <h3>Simple Brew</h3>
             <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -140,13 +145,13 @@ function injectCartIntoForm() {
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <span>₱50.00</span>
-            <a class="btn" onclick="addToCart('Podi Idly', 50.00)">Add to Cart</a>
+            <span>₱99.00</span>
+            <a class="btn" onclick="addToCart('simple brew', 99.00)">Add to Cart</a>
 
         </div>
 
         <div class="box">
-            <img src="images/.png" alt="">
+            <img src="images/strawberry_matcha.png" alt="">
             <h3>Strawberry Matcha</h3>
             <div class="stars">
                 <i class="fas fa-star"></i>
@@ -155,14 +160,14 @@ function injectCartIntoForm() {
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <span>₱45.00</span>
-            <a class="btn" onclick="addToCart('Idly Sambhar', 45.00)">Add to Cart</a>
+            <span>₱189.00</span>
+            <a class="btn" onclick="addToCart('strawberry matcha', 189.00)">Add to Cart</a>
 
         </div>
 
         <div class="box">
-            <img src="images/Vada.png" alt="">
-            <h3>Vada</h3>
+            <img src="images/vanilla_sweet_cream_cold_brew.png" alt="">
+            <h3>vanilla sweetcream cold brew</h3>
             <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -170,13 +175,13 @@ function injectCartIntoForm() {
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <span>₹50.00</span> 
-            <a class="btn" onclick="addToCart('Vada', 50.00)">Add to Cart</a>
+            <span>₱189.00</span> 
+            <a class="btn" onclick="addToCart('vanilla sweetcream coldbrew', 189.00)">Add to Cart</a>
          </div>
 
          <div class="box">
-            <img src="images/upma.png" alt="">
-            <h3>Upma</h3>
+            <img src="images/placeholder.png" alt="">
+            <h3>placeholder</h3>
             <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -184,13 +189,13 @@ function injectCartIntoForm() {
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <span>₹65.00</span> 
-            <a class="btn" onclick="addToCart('Upma', 65.00)">Add to Cart</a>
+            <span>₱65.00</span> 
+            <a class="btn" onclick="addToCart('placeholder', 65.00)">Add to Cart</a>
          </div>
 
          <div class="box">
-            <img src="images/Puri.png" alt="">
-            <h3>Puri</h3>
+            <img src="images/!!!.png" alt="">
+            <h3>placeholder</h3>
             <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -198,35 +203,21 @@ function injectCartIntoForm() {
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <span>₹50.00</span> 
-            <a class="btn" onclick="addToCart('Puri', 50.00)">Add to Cart</a>
-         </div>
-
-         <div class="box">
-            <img src="images/poha.png" alt="">
-            <h3>Poha</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>₹40.00</span> 
-            <a class="btn" onclick="addToCart('Poha', 40.00)">Add to Cart</a>
+            <span>₱50.00</span> 
+            <a class="btn" onclick="addToCart('placeholder', 50.00)">Add to Cart</a>
          </div>
     </div>
 </div>
 <br />
 <br />
 
-<h3 class="heading">Lunch</h3>
+<h3 class="heading">Sides</h3>
 
     <div class="box-container">
 
         <div class="box">
-            <img src="images/Veg_Thali.png" alt="">
-            <h3>Veg Thali</h3>
+            <img src="images/wafers.png" alt="">
+            <h3>wafers</h3>
             <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -234,13 +225,13 @@ function injectCartIntoForm() {
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <span>₹110.00</span>
-            <a class="btn" onclick="addToCart('Veg Thali', 110.00)">Add to Cart</a>
+            <span>₱15.00</span>
+            <a class="btn" onclick="addToCart('wafers', 15.00)">Add to Cart</a>
         </div>
 
         <div class="box">
-            <img src="images/Biryani.png" alt="">
-            <h3>Biryani</h3>
+            <img src="images/chocolate_chip_cookies.png" alt="">
+            <h3>chocolate chip cookies</h3>
             <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -248,13 +239,13 @@ function injectCartIntoForm() {
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <span>₹180.00</span>
-            <a class="btn" onclick="addToCart('Biryani', 180.00)">Add to Cart</a>
+            <span>₱25.00</span>
+            <a class="btn" onclick="addToCart('chocolate chip cookies', 25.00)">Add to Cart</a>
         </div>
 
         <div class="box">
-            <img src="images/Fried_rice.png" alt="">
-            <h3>Fried Rice</h3>
+            <img src="images/creamfilled_breadrolls.png" alt="">
+            <h3>cream-filled breadrolls</h3>
             <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -262,37 +253,9 @@ function injectCartIntoForm() {
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
             </div>
-            <span>₹70.00</span>
-            <a class="btn" onclick="addToCart('fried rice', 70.00)">Add to Cart</a>
+            <span>₱35.00</span>
+            <a class="btn" onclick="addToCart('cream-filled breadrolls', 35.00)">Add to Cart</a>
         </div>
-
-        <div class="box">
-            <img src="images/Mushroom.png" alt="">
-            <h3>Mushroom Rice</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>₹90.00</span> 
-            <a class="btn" onclick="addToCart('mushroom rice', 90.00)">Add to Cart</a>
-         </div>
-
-         <div class="box">
-            <img src="images/Curd_rice.png" alt="">
-            <h3>Curd Rice</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>₹60.00</span> 
-            <a class="btn" onclick="addToCart('Curd rice', 60.00)">Add to Cart</a>
-         </div>    
     </div>
 </div>
 </section>
